@@ -16,7 +16,11 @@ msg/VehicleCamAttitude.msg
 
 the new message to add on the jetson and to publish is called  VehicleCamAttitude
 this is changed inside src/modules/uxrce_dds_client/dds_topics.yaml to be a new subscriber,
-you need to find teeh equivalent px4_msg firectory on the jetson and add the exact uorb topic in the pushlishing mist
+you need to find teeh equivalent px4_msg firectory on the jetson and add the exact uorb topic in the pushlishing 
+
+ Publish Your uORB Message from the Jetson after adding the new msg to the px4_msg on the jetson
+Include Header: In your Jetson application, include the C++ header file corresponding to the uORB message you want to publish (e.g., #include <uORB/topics/vehicle_cam_attitude.h>). 
+Instantiate and Publish: Get a handle to the topic using its ORB_ID, allocate a message struct, fill it with data, and then publish it using orb_publish
 
 
 -------------------------------------------
